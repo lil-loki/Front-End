@@ -1,0 +1,75 @@
+<div class="Emi-Outer-Container">
+
+  <div class="Emi-Header-Container">
+    <span class="Emi-Header">EMI CALACULATOR</span>
+  </div>
+
+
+  <div class="Form-Main-Container">
+    <div class="Form-Body" >
+      <div class="Lable-Container"><span class="Lable">Principal:</span></div>
+      <input type="text" class="Text" [(ngModel)]="principal" #P="ngModel"  placeholder="Loan Amount" required>
+      <div class="Lable-Container"><span class="Lable">Rate Of Interest:</span></div>
+      <input type="text" class="Text" [(ngModel)]="rate"  #R="ngModel"  placeholder="Interest Rate" required>
+      <div class="Lable-Container"><span class="Lable">Loan Tennure:</span></div>
+      <input type="text" class="Text" [(ngModel)]="tenure"   #T="ngModel"  placeholder="Loan Period " required minlength="10">    </div>
+    <button class="Button" (click)="getEmi()">Calculate</button>
+    <button class="Button" routerLink="">Back</button>
+  </div>
+
+  <ng-container *ngIf="emiState">
+    <div class="Emi-Main-Container">
+      <div class="Emi-Container">
+          <div class="Emi-Text-Container">
+            <span class="Emi-Text-Container-Heading">Loan EMI:</span>
+            <span>₹ {{emi}}</span>
+          </div>
+          <div class="Emi-Text-Container">
+            <span class="Emi-Text-Container-Heading">Total Interest Payable:</span>
+            <span>₹ {{totalInterest}}</span>
+          </div>
+          <div class="Emi-Text-Container">
+            <span class="Emi-Text-Container-Heading">Total Payment:</span>
+            <span class="Emi-Text-Container-Heading">(Principal + Interest)</span>
+            <span>₹ {{totalPayment}}</span>
+          </div>
+      </div>
+      <div class="Pie-Container">
+        <p-chart type="pie" [data]="data" [options]="chartOptions" class="Pie" ></p-chart>
+      </div>
+    </div>
+    <div class="Emi-Table-Header-Container">
+      <span class="Emi-Table-Header">EMI SPLIT UP</span>
+    </div>
+    <div class="Table-Container">
+      <table class="table table-striped table-hover table-bordered">
+        <thead>
+        <tr>
+          <th scope="col">Month</th>
+          <th scope="col">Principal</th>
+          <th scope="col">Interest</th>
+          <th scope="col">Total Payment</th>
+          <th scope="col">Total Payment</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let pp of pparr; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{pp.mp}}</td>
+          <td>{{pp.mi}}</td>
+          <td>{{emi}}</td>
+          <td>{{pp.olb}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,170 @@
+.Emi-Outer-Container{
+  display:flex;
+  flex-direction: column;
+  background-color: #f4f6fa;
+  height: 100%;
+  padding-top: 100px;
+}
+
+.Emi-Header-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Emi-Header{
+  font-family: "McLaren",cursive;
+  font-size: 40px;
+}
+
+.Form-Main-Container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.Form-Body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+
+}
+
+.Text{
+  height: 50px;
+  width: 350px;
+  font-family: "McLaren",cursive;
+  font-size: 26px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+  margin-bottom: 10px;
+
+}
+
+.Lable-Container{
+  width: 100%;
+  height: 100%;
+}
+
+
+.Lable{
+  display: flex;
+  align-items: flex-start;
+  font-family: "McLaren",cursive;
+  font-size: 20px;
+  margin: 0px 85px;
+  padding-bottom: 5px;
+}
+
+.Emi-Main-Container{
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: 500px;
+  margin: 40px auto;
+    /* border: 1px solid rgba(101,109,119,.26); */
+}
+
+.Emi-Text-Container{
+  text-align: center;
+  width: 450px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "McLaren",cursive;
+  font-size: 28px;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+  margin-bottom: 10px;
+
+}
+
+.Emi-Container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+}
+
+.Pie-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 470px;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(101,109,119,.26);
+
+}
+
+.Emi-Text-Container-Heading{
+  font-size: 20px;
+}
+
+.Pie{
+  width: 450px;
+  width: 450px;
+}
+
+.Emi-Table-Header-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Emi-Table-Header{
+  font-family: "McLaren",cursive;
+  font-size: 40px;
+}
+
+.Table-Container{
+  width: 1000px;
+  margin: 20px auto;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+}
+
+.Button{
+  width: 350px;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "McLaren",cursive;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+  margin-top: 10px;
+}
+
+.Button:hover{
+    background-color: black;
+    color: white;
+    border: none;
+}
