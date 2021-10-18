@@ -15,6 +15,8 @@ import { MainComponent } from './login/main/main.component';
 import { UserloginComponent } from './login/userlogin/userlogin.component';
 import { AdminloginComponent } from './login/adminlogin/adminlogin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoanregisterComponent } from './loanregister/loanregister.component';
+import { VehicleregisterComponent } from './vehicleregister/vehicleregister.component';
 
 
 
@@ -23,6 +25,7 @@ const routes:Routes=[
   {path:"EmiCalculator",component:EmiCalcComponent},
   // {path:"LoginMain",component:MainComponent},
   {path:"user",component:UserloginComponent},
+  {path: "loanregister", component:LoanregisterComponent}
   ]
 
 @NgModule({
@@ -35,7 +38,9 @@ const routes:Routes=[
     ProfileComponent,
     MainComponent,
     UserloginComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    LoanregisterComponent,
+    VehicleregisterComponent
   ],
   imports: [
     BrowserModule,

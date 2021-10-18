@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Register for Loan here</h2>
+</div>
+
+<div class="formClass">
+<form (ngSubmit)="registerloan()" ngNativeValidate>   
+    <label> Loan Amount : </label>   
+    <input type="number" name="loanAmount" placeholder= "Enter Loan Amount"  [(ngModel)]="loanAmount" required>    
+    <br><br>
+    <label> Tenure : </label>   
+    <select type="number" name="tenure" (change)="selectChangeHandler()" [(ngModel)]="tenure" required>  
+        <option selected disabled hidden style='display: none' value='undefined'> Needed Repayment Time: </option>
+        <option value=6>6</option>
+        <option value=12>12</option>
+        <option value=24>24</option>
+        <option value=36>36</option>
+        <option value=48>48</option>
+        <option value=60>60</option>
+        <option value=72>72</option>
+        <option value=84>84</option>
+    </select><br> <br> 
+
+    <label> Loan Type </label>   
+    <input type="text" name="loantype" placeholder= "Enter Loan Type"  [(ngModel)]="loantype" required />   
+    <br><br>
+ 
+ <button type="submit">Submit Loan</button><br><br>
+  </form> 
+</div>
+

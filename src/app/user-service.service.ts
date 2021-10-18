@@ -16,6 +16,12 @@ import { Accounts } from './Accounts';
   providedIn: 'root'
 })
 export class UserServiceService {
+  registerloan(loan:Loan):Observable<any>
+  {
+
+    return this.http.post("http://localhost:3000/registerloan",loan)
+
+  }
 
 
   constructor(private http: HttpClient) {  }
