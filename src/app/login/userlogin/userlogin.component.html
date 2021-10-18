@@ -1,0 +1,10 @@
+<div class="Login-Container">
+      <h1 class = "Login-Header" >USER LOGIN</h1>
+          <form (ngSubmit)="login()" ngNativeValidate>
+              <input class="Text" type = "email" name = "email" placeholder = "Email" [(ngModel)]="email" required><br>
+              <input class="Text" type = "password" name = "password" placeholder = "Password" [(ngModel)]="password" required> <br>
+              <button type="submit" class='Button'>Login</button>
+              <button routerLink="" class='Button'>Login</button>
+          </form>
+</div>
+

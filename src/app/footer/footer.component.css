@@ -1,0 +1,12 @@
+.Footer {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  width: 98%;
+  height: 2.5rem;
+  align-content: center;
+}
+
+.Footer-P {
+  color: black;
+}

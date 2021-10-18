@@ -9,13 +9,20 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmiCalcComponent } from './emi-calc/emi-calc.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProfilecardsComponent } from './aboutus/profilecards/profilecards.component';
+import { ProfileComponent } from './aboutus/profile/profile.component';
+import { MainComponent } from './login/main/main.component';
+import { UserloginComponent } from './login/userlogin/userlogin.component';
+import { AdminloginComponent } from './login/adminlogin/adminlogin.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 
 const routes:Routes=[
-  // {path:"",component:EmiCalcComponent},
-  {path:"EmiCalculator",component:EmiCalcComponent}
+  {path:"EmiCalculator",component:EmiCalcComponent},
+  // {path:"LoginMain",component:MainComponent},
+  {path:"user",component:UserloginComponent},
   ]
 
 @NgModule({
@@ -23,14 +30,20 @@ const routes:Routes=[
     AppComponent,
     HeaderComponent,
     EmiCalcComponent,
-    FooterComponent
+    FooterComponent,
+    ProfilecardsComponent,
+    ProfileComponent,
+    MainComponent,
+    UserloginComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     [RouterModule.forRoot(routes)],
     NgbModule,
-    ChartModule
+    ChartModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

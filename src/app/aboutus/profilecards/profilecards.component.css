@@ -1,0 +1,82 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+
+.card {
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    border: 1;
+    border-radius: 1rem;
+    margin-left: 20px;
+    margin-top: 300px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.img-hover-zoom--colorize img {
+    border-radius: 50%;
+    width: 175px;
+    height: auto;
+    margin-top: 40px;
+    padding: 1px;
+    transition: transform .5s;
+    filter: grayscale(100%);
+}
+
+.img-hover-zoom--colorize:hover img {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.Card-Body{
+  margin-top: 30px;
+}
+
+.Name{
+  font-family: "McLaren",cursive;
+}
+
+.Name-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Role-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Role {
+    font-size: 1.3rem;
+    font-family: "McLaren",cursive;
+    color: #7a7a7a;
+}
+
+.Box {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab {
+    font-size: 1.5rem;
+    color: darkgray;
+    transition: transform .5s;
+    margin-left: 20px;
+}
+
+.fab:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+
+
+
