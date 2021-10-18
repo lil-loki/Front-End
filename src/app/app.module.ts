@@ -15,11 +15,13 @@ import { MainComponent } from './login/main/main.component';
 import { UserloginComponent } from './login/userlogin/userlogin.component';
 import { AdminloginComponent } from './login/adminlogin/adminlogin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 
 
 
 const routes:Routes=[
+  {path:"",component:HomeComponent},
   {path:"EmiCalculator",component:EmiCalcComponent},
   // {path:"LoginMain",component:MainComponent},
   {path:"user",component:UserloginComponent},
@@ -35,7 +37,8 @@ const routes:Routes=[
     ProfileComponent,
     MainComponent,
     UserloginComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
