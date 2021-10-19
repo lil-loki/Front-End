@@ -3,10 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 20px;
 }
 .Login-Header{
   font-family: "McLaren",cursive;
+  font-size: 26px;
+  text-decoration: underline;
+  margin-bottom: 10px;
 }
 
 .Text{

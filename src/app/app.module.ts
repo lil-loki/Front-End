@@ -16,6 +16,8 @@ import { UserloginComponent } from './login/userlogin/userlogin.component';
 import { AdminloginComponent } from './login/adminlogin/adminlogin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './login/register/register.component';
+
 
 
 
@@ -23,8 +25,10 @@ import { HomeComponent } from './home/home.component';
 const routes:Routes=[
   {path:"",component:HomeComponent},
   {path:"EmiCalculator",component:EmiCalcComponent},
-  // {path:"LoginMain",component:MainComponent},
-  {path:"user",component:UserloginComponent},
+  {path:"Login",component:MainComponent},
+  {path:"UserLogin",component:UserloginComponent},
+  {path:"AdminLogin",component:AdminloginComponent},
+  {path:"Register",component:RegisterComponent}
   ]
 
 @NgModule({
@@ -38,7 +42,8 @@ const routes:Routes=[
     MainComponent,
     UserloginComponent,
     AdminloginComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
