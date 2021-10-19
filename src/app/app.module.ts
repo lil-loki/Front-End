@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes,RouterModule } from '@angular/router';
 import {ChartModule} from 'primeng/chart';
 
@@ -52,6 +52,7 @@ const routes:Routes=[
     NgbModule,
     ChartModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
