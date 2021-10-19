@@ -1,20 +1,25 @@
-<div class="container">
-  <div class="row">
-    <h1 class="text" style = "font-size: 25px;">Login into your account</h1>
-    <hr style="width:70%">
-    <p class = "text" style = "color: grey; font-size: 12px;">Login using your username and password<p>
-    <br>
-    <a class = "btn login" routerLink='/admin'>Admin Login</a> <br>
-    <a class = "btn login" routerLink='/user'>User Login</a> <br> <br>
-      <p class="text" style="color: grey;">Not a registered user? Sign up!<p>
+<div  class="Login-Main-Outer-Container">
+  <div class="Login-Main-Container">
+    <div class="Login-Header-Container">
+      <div class="User-Header-Container" [ngClass]="!user ? 'InActive' : ''" (click)="changeToUser()">
+        <!-- <span class="User-Header">User</span> -->
+        User
+      </div>
+      <div class="Admin-Header-Container" [ngClass]="user ? 'InActive' : ''" (click)="changeToAdmin()">
+        <!-- <span class="Admin-Header">Admin</span> -->
+        Admin
+      </div>
+    </div>
+    <div>
+      <ng-container *ngIf="user; else Admin">
+        <app-userlogin></app-userlogin>
+      </ng-container>
+      <ng-template #Admin>
+        <app-adminlogin></app-adminlogin>
+      </ng-template>
+    </div>
+    <div class="Login-Footer-Container">
+     Dont Have An Account?? <span class="Register" routerLink="/Register"> Sign up!</span>
+    </div>
   </div>
 </div>
-
-<div class="bottom-container">
-<div class="row">
-  <div class="col">
-    <a href="/registration" style="color:white" class="btn">SIGN UP</a>
-  </div>
-</div>
-
-<app-userlogin></app-userlogin>

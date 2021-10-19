@@ -7,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  user:boolean=true;
+
   constructor() { }
 
   ngOnInit(): void {
     sessionStorage.clear();
+  }
+
+  changeToAdmin()
+  {
+    this.user=false;
+  }
+
+  changeToUser(){
+    this.user=true;
   }
 
 }
