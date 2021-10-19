@@ -16,6 +16,10 @@ import { Accounts } from './Accounts';
   providedIn: 'root'
 })
 export class UserServiceService {
+  
+  constructor(private http: HttpClient) {  }
+
+
   registerloan(loan:Loan):Observable<any>
   {
 
@@ -24,10 +28,12 @@ export class UserServiceService {
   }
 
 
-  constructor(private http: HttpClient) {  }
+  registerVehicle(vehicle:Vehicle):Observable<any>
+  {
+    
+      return this.http.post("http://localhost:3000/vehicleregister",vehicle)
 
-
-
+  }
 
     login(login:Login):Observable<any>
     {

@@ -21,7 +21,6 @@ export class LoanregisterComponent implements OnInit {
 
   emi:number=this.loanAmount/this.tenure;
   router: any;
- 
 
   constructor(private service:UserServiceService) { }
   ngOnInit(): void {
