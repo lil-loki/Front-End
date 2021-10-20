@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppliedLoanList } from 'src/app/AppliedLoanList';
+import { Loan } from 'src/app/Loan';
+import { UserServiceService } from 'src/app/user-service.service';
 
 @Component({
   selector: 'app-userdashmain',
@@ -8,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class UserdashmainComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private service: UserServiceService ,private router:Router) { }
 
   userName:any;
   userId:any;
@@ -18,7 +21,12 @@ export class UserdashmainComponent implements OnInit {
   userEmail:any;
   userGender:any;
   userZip:any;
-  sidebarState:number=2;
+  sidebarState:number=1;
+
+  loanApplied:number=0;
+  loanApproved:number=0;
+  loanRejected:number=0;
+  LoanList : AppliedLoanList[] = [];
 
   ngOnInit(): void {
     this.userName=sessionStorage.getItem('userName');
@@ -30,11 +38,37 @@ export class UserdashmainComponent implements OnInit {
     this.userGender=sessionStorage.getItem('userGender');
     this.userZip=sessionStorage.getItem('userZip');
 
-
     if(this.userId==null)
     {
       this.router.navigate(['Login']);
     }
+    this.service.viewloanstatus(this.userId).subscribe(
+      data => {
+        this.LoanList = data
+      }
+    );
+
+    console.log(this.LoanList);
+
+    setTimeout(() =>{
+      this.LoanList.forEach(element => {
+        if(element.applicationStatus=="Pending"){
+          console.log(element.applicationStatus);
+
+          this.loanApplied+=1;
+        }
+        else if(element.applicationStatus=="Approved"){
+          console.log(element.applicationStatus);
+          this.loanApproved+=1;
+        }
+        else{
+          console.log(element.applicationStatus);
+          this.loanRejected+=1;
+        }
+      });
+   }, 2000);
+
+
   }
 
   dashboard()
