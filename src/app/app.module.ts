@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { Routes,RouterModule } from '@angular/router';
 import {ChartModule} from 'primeng/chart';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,6 +18,12 @@ import { AdminloginComponent } from './login/adminlogin/adminlogin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './login/register/register.component';
+import { LoanapplicationComponent } from './loanapplication/loanapplication.component';
+import { VehicleregistrationComponent } from './vehicleregistration/vehicleregistration.component';
+import { UserdashmainComponent } from './userdashboard/userdashmain/userdashmain.component';
+import { SidebarComponent } from './userdashboard/sidebar/sidebar.component';
+import { CheckeligibilityComponent } from './checkeligibility/checkeligibility.component';
+import { AccountregistrationComponent } from './accountregistration/accountregistration.component';
 
 
 
@@ -28,7 +35,10 @@ const routes:Routes=[
   {path:"Login",component:MainComponent},
   {path:"UserLogin",component:UserloginComponent},
   {path:"AdminLogin",component:AdminloginComponent},
-  {path:"Register",component:RegisterComponent}
+  {path:"Register",component:RegisterComponent},
+  {path:"LoanApplication",component:LoanapplicationComponent},
+  {path:"VehicleRegistration",component:VehicleregistrationComponent},
+  {path:"UserDashboard",component:UserdashmainComponent}
   ]
 
 @NgModule({
@@ -44,6 +54,12 @@ const routes:Routes=[
     AdminloginComponent,
     HomeComponent,
     RegisterComponent,
+    LoanapplicationComponent,
+    VehicleregistrationComponent,
+    UserdashmainComponent,
+    SidebarComponent,
+    CheckeligibilityComponent,
+    AccountregistrationComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +68,7 @@ const routes:Routes=[
     NgbModule,
     ChartModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

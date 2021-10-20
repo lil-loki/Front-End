@@ -1,0 +1,56 @@
+<div class="Main-Outer-Container">
+  <div class="Sidebar-Main-Container">
+    <div class="Sidebar-Elements" >
+      <div class="Sidebar-Element"(click)="dashboard()">
+        <i class="fas fa-chart-pie"></i>Dashboard
+      </div>
+      <!-- <div class="Sidebar-Element" (click)="bankAccount()">
+        <i class="fas fa-university "></i>Link Bank Account
+      </div> -->
+      <div class="Sidebar-Element" (click)="loanAppl()">
+        <i class="fas fa-file-signature"></i>Loan Application
+      </div>
+      <div class="Sidebar-Element" (click)="checkEligibility()">
+        <i class="fas fa-user-check"></i>Check Eligibility
+      </div>
+      <div class="Sidebar-Element Logout" (click)="logout()">
+        <i class="fas fa-user-check"></i>Log Out
+      </div>
+    </div>
+  </div>
+
+  <div [ngSwitch]="sidebarState">
+  <div *ngSwitchCase="1">
+    <div class = "container">
+      <div style="margin-top: 10px; margin-bottom: 10px; color: #365040;">
+          Hello <u><b>{{userName}} {{userLast}} </b></u>!<br><br>
+          <b>Your User ID is : </b><p>{{userId}}</p><br>
+          <b>Your Age is: </b><p>{{userAge}}</p><br>
+          <b>Your Address is: </b><p>{{userAddress}}</p><br>
+          <b>Your Mail ID is: </b><p>{{userEmail}}</p><br>
+          <b>Your Gender is:</b><p>{{userGender}}</p><br>
+          <b>Youe ZipCode is:</b><p>{{userZip}}</p><br><br>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="2">
+    <app-accountregistration></app-accountregistration>
+  </div>
+  <div *ngSwitchCase="3">
+    <app-loanapplication></app-loanapplication>
+  </div>
+  <div *ngSwitchCase="4">
+    <app-checkeligibility></app-checkeligibility>
+  </div>
+
+  <p *ngSwitchDefault>
+  </p>
+  </div>
+
+
+
+
+
+
+</div>
+

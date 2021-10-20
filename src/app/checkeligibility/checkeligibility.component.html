@@ -1,0 +1,18 @@
+<div class = "container">
+  <span class = "Registration-Header" >Check Loan Eligibility</span>
+    <form (ngSubmit)=checkeligiblity() ngNativeValidate>
+      <div class="Lable-Container"><span class="Lable">Principal:</span></div>
+      <input type="text" class="Text" name="principal" [(ngModel)]="principal"  placeholder="Loan Amount" required>
+      <div class="Lable-Container"><span class="Lable">Rate Of Interest:</span></div>
+      <input type="text" class="Text" name="rate" [(ngModel)]="rate"    placeholder="Interest Rate" required>
+      <div class="Lable-Container"><span class="Lable">Loan Tennure:</span></div>
+      <input type="text" class="Text"  name="tenure" [(ngModel)]="tenure"  placeholder="Loan Period ">
+      <div class="Lable-Container"><span class="Lable">Monthly Savings :</span></div>
+      <input class="Text" type = "number"  name="monthlysavings" placeholder = "Monthly Savings" [(ngModel)]="monthlysavings" required/>
+      <div class="Lable-Container"><span class="Lable">Existing EMI :</span></div>
+      <input class="Text" type = "number"  name="existingemi" placeholder = "Existing EMI" [(ngModel)]="existingemi" required/>
+      <button type="submit" class='Button'>Check Eligiblity</button>
+    </form>
+</div>
+
+
