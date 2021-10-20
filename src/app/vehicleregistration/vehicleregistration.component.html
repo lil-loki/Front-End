@@ -1,0 +1,34 @@
+<div class="container">
+  <span class = "Registration-Header" >Register for Vehicle here</span>
+  <form class="Form-Body" (ngSubmit)=" registerVehicle()" ngNativeValidate>
+    <div class="Form">
+        <div class="Form-1">
+        <div class="Lable-Container"><span class="Lable">Vehicle Registration Number :</span></div>
+        <input class="Text" type="text" name="VehicleId" placeholder="Vehicle Registration Number"  [(ngModel)]="VehicleId" required/>
+        <div class="Lable-Container"><span class="Lable">Vehicle Name:</span></div>
+        <input class="Text" type="text" name="VehicleName" placeholder="Vehicle Name"  [(ngModel)]= "VehicleName"/>
+        <div class="Lable-Container"><span class="Lable">Vehicle Model :</span></div>
+        <input class="Text" type="text" name="VehicleModel" placeholder="Vehicle Model" [(ngModel)]= "VehicleModel"/>
+        <div class="Lable-Container"><span class="Lable">Vehicle Type :</span></div>
+        <select class="Text" type="text" name="VehicleType" [(ngModel)]= "VehicleType" required>
+          <option value="Two-Wheeler">Two Wheeler</option>
+          <option value="Three-Wheeler">Three Wheeler</option>
+          <option value="Four-Wheeler">Four Wheeler</option>
+        </select>
+      </div>
+      <div class="Form-2">
+        <div class="Lable-Container"><span class="Lable">Vehicle Year :</span></div>
+        <input class="Text" type="number" name="VehicleYear" placeholder="Vehicle Year"  [(ngModel)]= "VehicleYear"/>
+        <div class="Lable-Container"><span class="Lable">Vehicle Colour :</span></div>
+        <input class="Text" type="text" name="VehicleColour" placeholder="Vehicle Colour"  [(ngModel)] = "VehicleColour"/>
+        <div class="Lable-Container"><span class="Lable">Ex-Showroom Price :</span></div>
+        <input class="Text" type="number" name="ExShowroomPrice" placeholder="Ex-Showroom Price"  [(ngModel)]="ExShowroomPrice"/>
+        <div class="Lable-Container"><span class="Lable">OnRoadPrice :</span></div>
+        <input class="Text" type="number" name="OnRoadPrice" placeholder="OnRoadPrice"  [(ngModel)]= "OnRoadPrice" required/>
+      </div>
+      </div>
+    <div class="Submit">
+      <button class="Button" type="submit">Register Vehicle</button>
+    </div>
+  </form>
+</div>

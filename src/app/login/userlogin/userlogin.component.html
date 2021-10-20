@@ -1,10 +1,23 @@
 <div class="Login-Container">
-      <span class = "Login-Header" >USER LOGIN</span>
-          <form (ngSubmit)="login()" ngNativeValidate>
-              <input class="Text" type = "email" name = "email" placeholder = "Email" [(ngModel)]="email" required><br>
-              <input class="Text" type = "password" name = "password" placeholder = "Password" [(ngModel)]="password" required> <br>
-              <button type="submit" class='Button'>Login</button>
-              <button routerLink="" class='Button'>Back</button>
-          </form>
+    <span class="Login-Header">USER LOGIN</span>
+    <form [formGroup]="userLoginForm" (ngSubmit)="login()" ngNativeValidate>
+
+        <input class="Text" formControlName="emailId" type="email" name="email" placeholder="Email" [(ngModel)]="email"
+            required><br>
+        <div *ngIf="emailid.invalid && (emailid.touched || emailid.dirty)">
+            <span class="error" *ngIf="emailid.errors?.required"> *Email is Required. </span>
+            <span class="error" *ngIf="emailid.errors?.email"> *Enter Valid Email Address. </span>
+        </div>
+
+
+        <input class="Text" formControlName="Password" type="password" name="password" placeholder="Password"
+            [(ngModel)]="password" required> <br>
+        <div *ngIf="pass.invalid && (pass.touched || pass.dirty)">
+            <span class="error" *ngIf="pass.errors?.required"> *Password cannot be empty. </span>
+        </div>
+
+        <button type="submit" class='Button'>Login</button>
+        <button routerLink="" class='Button'>Back</button>
+    </form>
 </div>
 

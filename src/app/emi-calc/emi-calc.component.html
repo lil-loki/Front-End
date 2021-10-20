@@ -12,7 +12,7 @@
       <div class="Lable-Container"><span class="Lable">Rate Of Interest:</span></div>
       <input type="text" class="Text" [(ngModel)]="rate"  #R="ngModel"  placeholder="Interest Rate" required>
       <div class="Lable-Container"><span class="Lable">Loan Tennure:</span></div>
-      <input type="text" class="Text" [(ngModel)]="tenure"   #T="ngModel"  placeholder="Loan Period " required minlength="10">    </div>
+      <input type="text" class="Text" [(ngModel)]="tenure"   #T="ngModel"  placeholder="Loan Period ">    </div>
     <button class="Button" (click)="getEmi()">Calculate</button>
     <button class="Button" routerLink="">Back</button>
   </div>
