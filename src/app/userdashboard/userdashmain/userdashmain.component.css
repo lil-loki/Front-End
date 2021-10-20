@@ -1,3 +1,7 @@
+.container-1{
+  margin: auto auto;
+}
+
 .Main-Outer-Container{
   width: 100vw;
   height: 100vh;
@@ -39,3 +43,180 @@
   position: absolute;
   bottom: 0px;
 }
+
+
+.card {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+}
+
+
+.img-hover-zoom--colorize img {
+  border-radius: 50%;
+  width: 80px;
+  height: auto;
+  margin-top: 10px;
+  padding: 1px;
+  transition: transform .5s;
+  filter: grayscale(100%);
+  border: 3px solid black;
+}
+
+.img-hover-zoom--colorize:hover img {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+.Top{
+  height: 70%;
+  background-color: violet;
+}
+
+.Card-Body{
+margin-top: 10px;
+}
+
+.Name{
+  font-size: 1.3rem;
+  font-family: "McLaren",cursive;
+}
+
+.Name-Container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.Role-Container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.Role {
+  font-size: 1.3rem;
+  font-family: "McLaren",cursive;
+  color: #7a7a7a;
+}
+
+.Box {
+margin-top: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.Image-Container{
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
+
+
+}
+
+.Image{
+  font-size: 50px;
+}
+
+.Appl-Header{
+  display: flex;
+  width: 70vw;
+  height: 50px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+}
+
+.RowH{
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: black;
+  color: white;
+  font-family: "McLaren",cursive;
+
+}
+
+
+.Appl-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70vw;
+}
+
+.Appl{
+  display: flex;
+  width: 100%;
+  height: 55px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+  margin-top:10px;
+}
+
+.Row{
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #fff;
+  font-family: "McLaren",cursive;
+}
+
+.Appl:hover{
+  transform: scale(1.01);
+}
+
+.Emi-Header-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Card-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(101,109,119,.26);
+  margin-left: 30px;
+
+}
+
+.Card-Main-Container{
+  display: flex;
+  width: 1000px;
+  height: 300px;
+  margin: auto auto;
+}
+
+.Card-Text-Container-Heading{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width:100%;
+  font-family: "McLaren",cursive;
+  font-size: 100px;
+
+}
+.Card-Text-Container-Text{
+  font-family: "McLaren",cursive;
+  font-size: 25px;
+}
+
+

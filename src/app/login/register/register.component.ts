@@ -18,8 +18,8 @@ export class RegisterComponent implements OnInit {
   userNameLast: any;
   userNameMiddle: any;
   userAge: any;
-  userGender: any;
-  userAddress: any;
+  userGender:String="";
+  userAddress: String="";
   userEmail: any;
   userPass: any;
   userZip: any;
@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
         if (user.status == 'SUCCESS') {
           console.log(user)
           alert("New User Registered !!");
-          this.router.navigate(['UserLogin'])
+          this.router.navigate(['Login'])
         }
         else {
           alert("User Already Exists !!");
@@ -69,7 +69,10 @@ export class RegisterComponent implements OnInit {
       "Zip": new FormControl(null, [Validators.required, Validators.pattern('[0-9]*')]),
       "lastName": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-Z]*')]),
       "middleName": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-Z]*')]),
-      "Age": new FormControl(null, [Validators.required])
+      "Age": new FormControl(null, [Validators.required]),
+      "Address": new FormControl(null, [Validators.required]),
+      "Gender": new FormControl(null, [Validators.required])
+
 
     });
   }
@@ -81,6 +84,8 @@ export class RegisterComponent implements OnInit {
   get password() { return this.registerForm.get('Password'); }
   get age() { return this.registerForm.get('Age'); }
   get zip() { return this.registerForm.get('Zip'); }
+  get address() { return this.registerForm.get('Address'); }
+  get gender() { return this.registerForm.get('Gender'); }
 
 
 

@@ -1,5 +1,26 @@
 <div class="Main-Outer-Container">
   <div class="Sidebar-Main-Container">
+    <div>
+      <div class="card">
+        <div class="text-center">
+            <div class="img-hover-zoom img-hover-zoom--colorize Top">
+                <img class="shadow" src="https://source.unsplash.com/rDEOVtE7vOs/600x600"
+                    alt="Another Image zoom-on-hover effect">
+            </div>
+            <!-- <div class="Image-Container">
+              <i class="fas fa-user Image"></i>
+            </div> -->
+        </div>
+        <div class="Card-Body ">
+            <div class="Name-Container">
+                <h1 class="Name">{{userName}} {{userLast}}</h1>
+            </div>
+            <div class="Role-Container">
+                <h2 class="Role">User Id:{{userId}}</h2>
+            </div>
+        </div>
+      </div>
+    </div>
     <div class="Sidebar-Elements" >
       <div class="Sidebar-Element"(click)="dashboard()">
         <i class="fas fa-chart-pie"></i>Dashboard
@@ -14,43 +35,88 @@
         <i class="fas fa-user-check"></i>Check Eligibility
       </div>
       <div class="Sidebar-Element Logout" (click)="logout()">
-        <i class="fas fa-user-check"></i>Log Out
+        <i class="fas fa-sign-out-alt"></i>Log Out
       </div>
     </div>
   </div>
 
-  <div [ngSwitch]="sidebarState">
-  <div *ngSwitchCase="1">
-    <div class = "container">
-      <div style="margin-top: 10px; margin-bottom: 10px; color: #365040;">
-          Hello <u><b>{{userName}} {{userLast}} </b></u>!<br><br>
-          <b>Your User ID is : </b><p>{{userId}}</p><br>
-          <b>Your Age is: </b><p>{{userAge}}</p><br>
-          <b>Your Address is: </b><p>{{userAddress}}</p><br>
-          <b>Your Mail ID is: </b><p>{{userEmail}}</p><br>
-          <b>Your Gender is:</b><p>{{userGender}}</p><br>
-          <b>Youe ZipCode is:</b><p>{{userZip}}</p><br><br>
+  <div  class = "container-1" [ngSwitch]="sidebarState">
+    <div class = "container-1" *ngSwitchCase="1">
+      <div class = "container">
+        <div class="Card-Main-Container">
+            <div class="Card-Container">
+              <span class="Card-Text-Container-Heading">{{loanApplied}}</span>
+              <span class="Card-Text-Container-Text">Loans Applied</span>
+            </div>
+          <div class="Card-Container">
+            <span class="Card-Text-Container-Heading">{{loanApproved}}</span>
+              <span class="Card-Text-Container-Text">Loans Approved</span>
+          </div>
+          <div class="Card-Container">
+            <span class="Card-Text-Container-Heading">{{loanRejected}}</span>
+              <span class="Card-Text-Container-Text">Loans Rejected</span>
+          </div>
+
+        </div>
+
+                <!-- <table class="table table-striped table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Loan Id</th>
+                      <th scope="col">Principal</th>
+                      <th scope="col">Rate Of Interest</th>
+                      <th scope="col">Tennure</th>
+                      <th scope="col">EMI</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor = "let loan of LoanList; let index = index;">
+                        <th scope="row">{{loan.loanId}}</th>
+                        <td>{{loan.loanAmount}}</td>
+                        <td>{{loan.interestRate}}%</td>
+                        <td>{{loan.tenure}}</td>
+                        <td>{{loan.emi}}</td>
+                        <td>{{loan.applicationStatus}} </td>
+                      </tr>
+                      </tbody>
+                  </table> -->
+                  <div>
+                    <div class="Main-Appl-Container">
+                      <div class="Appl-Header">
+                          <div class="RowH">Loan Ammount</div>
+                          <div class="RowH">Rate%</div>
+                          <div class="RowH" >Tennure</div>
+                          <div class="RowH">EMI</div>
+                          <div class="RowH">Status</div>
+                      </div>
+                    </div>
+
+                    <div class="Appl-Container" *ngFor = "let loan of LoanList; let index = index;">
+                      <div class="Appl">
+                        <div class="Row ">{{loan.loanAmount}}</div>
+                        <div class="Row">{{loan.interestRate}}%</div>
+                        <div class="Row" >{{loan.tenure}}</div>
+                        <div class="Row">{{loan.emi}}</div>
+                        <div class="Row">{{loan.applicationStatus}}</div>
+                      </div>
+                    </div>
+                  </div>
+
+          </div>
+      </div>
+    <div *ngSwitchCase="2">
+      <div>
+        <app-accountregistration></app-accountregistration>
       </div>
     </div>
+    <div *ngSwitchCase="3">
+      <app-loanapplication></app-loanapplication>
+    </div>
+    <div *ngSwitchCase="4">
+      <app-checkeligibility></app-checkeligibility>
+    </div>
+
   </div>
-  <div *ngSwitchCase="2">
-    <app-accountregistration></app-accountregistration>
-  </div>
-  <div *ngSwitchCase="3">
-    <app-loanapplication></app-loanapplication>
-  </div>
-  <div *ngSwitchCase="4">
-    <app-checkeligibility></app-checkeligibility>
-  </div>
-
-  <p *ngSwitchDefault>
-  </p>
-  </div>
-
-
-
-
-
-
 </div>
 
