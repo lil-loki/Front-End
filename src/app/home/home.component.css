@@ -1,0 +1,292 @@
+.Profile-Header-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.Profile-Header{
+  font-family: "McLaren",cursive;
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 45px;
+  font-family: McLaren, sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  font-family: McLaren, sans-serif;
+  color: #27346A;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container.feature {
+  padding-top: 36px;
+}
+
+.hero-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  min-height: 550px;
+  align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../../assets/Images/Carhero.jpeg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/Images/Carhero.jpeg');
+  background-position: 0px 0px, 50% 100%;
+  background-size: auto, cover;
+}
+
+.hero-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 550px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.hero-heading {
+  width: 70%;
+  font-family: McLaren, sans-serif;
+  color: #f9f9f9;
+  font-size: 70px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.hero-paragraph {
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-family: McLaren, sans-serif;
+  color: #f9f9f9;
+  font-size: 20px;
+}
+
+.features-section {
+  padding-top: 92px;
+  padding-bottom: 92px;
+}
+
+.support-top-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0px;
+  align-items: center;
+}
+
+.support-top-heading {
+  width: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: McLaren, sans-serif;
+  font-size: 35px;
+  line-height: 1.2;
+}
+
+
+.about-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-columns-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  padding: 20px;
+  margin: 20px;
+
+  flex-direction: column;
+
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+  background-color: white;
+}
+
+.about-column:hover {
+  transform: scale(1.2);
+}
+
+
+
+.meet-the-owners-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.meet-the-owners-right {
+  width: 70%;
+  padding: 90px 55px 90px 245px;
+  border-radius: 0px;
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+.meet-the-owners-left {
+  position: absolute;
+  left: 0%;
+  top: 5%;
+  right: auto;
+  bottom: 0%;
+  width: 45%;
+  height: 90%;
+  border-radius: 0px;
+  background-image: url('../../assets/Images/Carsection.jpg');
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+.paragraph {
+  font-family: McLaren, sans-serif;
+}
+
+.paragraph-2 {
+  margin-bottom: 0px;
+  font-family: McLaren, sans-serif;
+  color: #27346A;
+  letter-spacing: 2px;
+}
+
+.paragraph-2.white {
+  color: hsla(0, 0%, 97.7%, 0.63);
+}
+
+.small-heading {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.horizontal-line {
+  width: 80px;
+  height: 1px;
+  margin-left: 20px;
+  border-top: 2px solid #27346A;
+}
+
+.horizontal-line.white {
+  border-top-color: hsla(0, 0%, 97.7%, 0.55);
+}
+
+.text-span {
+  color: #27346A;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@font-face {
+  font-family: 'webflow-icons';
+  src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.w-row .w-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.w-col {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.w-col-6 {
+  width: 50%;
+}
+@media screen and (max-width: 991px) {
+  .w-container {
+    max-width: 728px;
+  }
+ }
+  .w-col {
+    width: 100%;
+    left: auto;
+    right: auto;
+  }
+
+

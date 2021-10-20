@@ -1,0 +1,42 @@
+<div [ngSwitch]="pageState">
+  <div *ngSwitchCase="1">
+    <div class="container">
+      <span class = "Registration-Header" >Register for Loan here</span>
+      <form class="Form-Body" [formGroup]="loanRegister" (ngSubmit)="registerloan()" ngNativeValidate>
+        <div class="Lable-Container"><span class="Lable">Loan Amount :</span></div>
+        <input class="Text" type="number" name="loanAmount" placeholder= "Enter Loan Amount" (input)="selectChangeHandler()"  [(ngModel)]="loanAmount" required>
+        <div *ngIf="loanAmount.invalid && (loanAmount.touched || loanAmount.dirty)">
+          <span class="error" *ngIf="loanAmount.errors?.required"> *Vehicle Year is Required. </span>
+          <span class="error" *ngIf="loanAmount.errors?.pattern"> *Enter only numbers. </span>
+        </div>
+
+        <div class="Lable-Container"><span class="Lable">Tenure :</span></div>
+        <select class="Text" type="number" name="tenure" (change)="selectChangeHandler()" [(ngModel)]="tenure"  required>
+            <option value=6>6</option>
+            <option value=12>12</option>
+            <option value=24>24</option>
+            <option value=36>36</option>
+            <option value=48>48</option>
+            <option value=60>60</option>
+            <option value=72>72</option>
+            <option value=84>84</option>
+        </select>
+        <div class="Lable-Container"><span class="Lable"> Rate Of Interest :</span></div>
+        <input class="Text" type="text" name="loantype" placeholder= "Rate"  [(ngModel)]="interestRate" required />
+        <div *ngIf="loantype.invalid && (loantype.touched || loantype.dirty)">
+          <span class="error" *ngIf="loantype.errors?.required"> *Vehicle Model is Required. </span>
+          <span class="error" *ngIf="loantype.errors?.pattern"> *Enter only characters.</span>
+        </div>
+
+        <div class="Lable-Container"><span class="Lable"> Estimated EMI :  {{emi}}</span></div>
+        <button class="Button" type="submit">Submit Loan</button>
+      </form>
+    </div>
+  </div>
+  <div class="Vehicle-Container" *ngSwitchCase="2">
+    <app-vehicleregistration></app-vehicleregistration>
+  </div>
+  <p *ngSwitchDefault>
+  </p>
+  </div>
+

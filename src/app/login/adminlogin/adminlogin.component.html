@@ -1,1 +1,19 @@
-<p>adminlogin works!</p>
+<div class="Login-Container">
+  <span class="Login-Header">ADMIN LOGIN</span>
+  <form [formGroup]="adminLoginForm" (ngSubmit)="loginadmin()" ngNativeValidate>
+    <input class="Text" formControlName="emailId" type="email" name="adminemail" placeholder="Admin Email"
+      [(ngModel)]="email" required><br>
+    <div *ngIf="emailid.invalid && (emailid.touched || emailid.dirty)">
+      <span class="error" *ngIf="emailid.errors?.required"> *Email is Required. </span>
+      <span class="error" *ngIf="emailid.errors?.email"> *Enter Valid Email Address. </span>
+    </div>
+
+    <input class="Text" formControlName="Password" type="password" name="adminpassword" placeholder="Admin Password"
+      [(ngModel)]="password" required> <br>
+    <div *ngIf="pass.invalid && (pass.touched || pass.dirty)">
+      <span class="error" *ngIf="pass.errors?.required"> *Password cannot be empty. </span>
+    </div>
+    <button type="submit" class='Button'>Login</button>
+    <button routerLink="" class='Button'>Back</button>
+  </form>
+</div>

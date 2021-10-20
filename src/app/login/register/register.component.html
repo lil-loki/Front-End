@@ -1,0 +1,72 @@
+<div class="container">
+  <span class="Registration-Header">Registration</span>
+  <form class="Form-Body" [formGroup]="registerForm" (ngSubmit)="register()" ngNativeValidate>
+
+    <div class="Lable-Container"><span class="Lable">First Name:</span></div>
+    <input class="Text" type="text" formControlName="firstName" name="FirstName" placeholder="First Name"
+      [(ngModel)]="userNameFirst" required />
+    <div *ngIf="firstname.invalid && (firstname.touched || firstname.dirty)">
+      <span class="error" *ngIf="firstname.errors?.required"> *First Name is Required. </span>
+      <span class="error" *ngIf="firstname.errors?.pattern"> *Enter only characters.</span>
+    </div>
+
+    <div class="Lable-Container"><span class="Lable">Last Name:</span></div>
+    <input class="Text" type="text" formControlName="lastName" name="LastName" placeholder="Last Name"
+      [(ngModel)]="userNameLast" required />
+    <div *ngIf="lastname.invalid && (lastname.touched || lastname.dirty)">
+      <span class="error" *ngIf="lastname.errors?.required"> *Last Name is Required. </span>
+      <span class="error" *ngIf="lastname.errors?.pattern"> *Enter only characters.</span>
+    </div>
+
+    <div class="Lable-Container"><span class="Lable">Middle Name:</span></div>
+    <input class="Text" formControlName="middleName" type="text" name="MiddleName" placeholder="Middle Name"
+      [(ngModel)]="userNameMiddle" />
+    <div *ngIf="middlename.invalid">
+      <span class="error" *ngIf="middlename.errors?.pattern"> *Enter only characters.</span>
+    </div>
+
+
+    <div class="Lable-Container"><span class="Lable">Email:</span></div>
+    <input class="Text" formControlName="emailId" type="email" name="email" placeholder="Email"
+      [(ngModel)]="userEmail" required>
+    <div *ngIf="emailid.invalid && (emailid.touched || emailid.dirty)">
+      <span class="error" *ngIf="emailid.errors?.required"> *Email is Required. </span>
+      <span class="error" *ngIf="emailid.errors?.email"> *Enter Valid Email Address. </span>
+    </div>
+
+    <div class="Lable-Container"><span class="Lable">Password:</span></div>
+    <input class="Text" formControlName="Password" type="password" name="password" placeholder="Password"
+      [(ngModel)]="userPass" required />
+    <div *ngIf="password.invalid && (password.touched || password.dirty)">
+      <span class="error" *ngIf="password.errors?.required"> *Password is Required. </span>
+    </div>
+
+    <div class="Lable-Container"><span class="Lable">Age:</span></div>
+    <input class="Text" type="number" formControlName="Age" name="Age" placeholder="Age" [(ngModel)]="userAge"
+      required />
+    <div *ngIf="age.invalid && (age.touched || age.dirty)">
+      <span class="error" *ngIf="age.errors?.required"> *Age is Required. </span>
+    </div>
+
+    <div class="Lable-Container"><span class="Lable">Gender:</span></div>
+    <select class="Text gender" type="text" name="gender" [(ngModel)]="userGender " required>
+      <option selected disabled hidden style='display: none' value='undefined'>Gender: </option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <div class="Lable-Container"><span class="Lable">Address:</span></div>
+    <input class="Text" name="Address" placeholder="Address" [(ngModel)]="userAddress" required />
+
+    <div class="Lable-Container"><span class="Lable">Zip:</span></div>
+    <input class="Text" formControlName="Zip" type="text" name="Zip" placeholder="Zip" [(ngModel)]="userZip"
+      required />
+    <div *ngIf="zip.invalid && (zip.touched || zip.dirty)">
+      <span class="error" *ngIf="zip.errors?.required"> *Zip is Required. </span>
+      <span class="error" *ngIf="zip.errors?.pattern"> *Enter only numbers. </span>
+    </div>
+
+    <button class="Button">Register</button><br><br>
+  </form>
+</div>

@@ -1,0 +1,41 @@
+.Main-Outer-Container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding-top: 70px;
+}
+
+.Sidebar-Main-Container{
+  width: 350px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border-right: 1px solid rgba(75,75,75,.26);
+  display: flex;
+  flex-direction: column;
+}
+
+.Sidebar-Elements{
+  margin-top: 30px;
+}
+
+.Sidebar-Element{
+  color: black;
+  font-family: "McLaren",cursive;
+  font-size: 20px;
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fas{
+  font-size: 30px;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+
+.Logout{
+  position: absolute;
+  bottom: 0px;
+}
