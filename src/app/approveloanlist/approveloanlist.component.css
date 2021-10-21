@@ -1,0 +1,54 @@
+.container{
+  margin-top: -250px;
+}
+
+.Appl-Header{
+  display: flex;
+  width: 70vw;
+  height: 50px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+}
+
+.RowH{
+  display: flex;
+  width: 16.7%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: black;
+  color: white;
+  font-family: "McLaren",cursive;
+
+}
+
+
+.Appl-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70vw;
+}
+
+.Appl{
+  display: flex;
+  width: 100%;
+  height: 55px;
+  box-shadow: 0 2px 4px 0 rgb(35 46 60 / 10%);
+  border: 1px solid rgba(75,75,75,.26);
+  margin-top:10px;
+}
+
+.Row{
+  display: flex;
+  width: 16.7%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #fff;
+  font-family: "McLaren",cursive;
+}
+
+.Appl:hover{
+  transform: scale(1.01);
+}

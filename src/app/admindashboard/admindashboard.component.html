@@ -1,0 +1,75 @@
+<div class="Main-Outer-Container">
+  <div class="Sidebar-Main-Container">
+    <div>
+      <div class="card">
+        <div class="text-center">
+            <div class="img-hover-zoom img-hover-zoom--colorize Top">
+                <img class="shadow" src="https://source.unsplash.com/rDEOVtE7vOs/600x600"
+                    alt="Another Image zoom-on-hover effect">
+            </div>
+            <!-- <div class="Image-Container">
+              <i class="fas fa-user Image"></i>
+            </div> -->
+        </div>
+        <div class="Card-Body ">
+            <div class="Name-Container">
+                <h1 class="Name">{{adminName}}</h1>
+            </div>
+            <div class="Role-Container">
+                <h2 class="Role">Admin Id:{{adminId}}</h2>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="Sidebar-Elements" >
+      <div class="Sidebar-Element"(click)="dashboard()">
+        <i class="fas fa-chart-pie"></i>Dashboard
+      </div>
+      <div class="Sidebar-Element" (click)="loanAppl()">
+        <i class="fas fa-file-signature"></i>Loan Application
+      </div>
+      <div class="Sidebar-Element" (click)="approvedList()">
+        <i class="fas fa-user-check"></i>Approved List
+      </div>
+      <div class="Sidebar-Element" (click)="rejectedlist()">
+        <i class="fas fa-user-check"></i>Reject List
+      </div>
+      <div class="Sidebar-Element Logout" (click)="logout()">
+        <i class="fas fa-sign-out-alt"></i>Log Out
+      </div>
+    </div>
+  </div>
+
+  <div  class = "container-1" [ngSwitch]="sidebarState">
+    <div class = "container-1" *ngSwitchCase="1">
+      <div class = "container">
+        <div class="Card-Main-Container">
+            <div class="Card-Container">
+              <span class="Card-Text-Container-Heading">{{loanApplied}}</span>
+              <span class="Card-Text-Container-Text">Loans Applied</span>
+            </div>
+          <div class="Card-Container">
+            <span class="Card-Text-Container-Heading">{{loanApproved}}</span>
+              <span class="Card-Text-Container-Text">Loans Approved</span>
+          </div>
+          <div class="Card-Container">
+            <span class="Card-Text-Container-Heading">{{loanRejected}}</span>
+              <span class="Card-Text-Container-Text">Loans Rejected</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    <div *ngSwitchCase="2">
+      <app-loanapproval></app-loanapproval>
+    </div>
+    <div *ngSwitchCase="3">
+      <app-approveloanlist></app-approveloanlist>
+    </div>
+    <div *ngSwitchCase="4">
+      <app-rejectedloanlist></app-rejectedloanlist>
+    </div>
+
+  </div>
+</div>
+
+
