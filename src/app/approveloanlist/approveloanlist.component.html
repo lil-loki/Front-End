@@ -1,0 +1,23 @@
+<div class = "container">
+  <div class="Main-Appl-Container">
+    <div class="Appl-Header">
+        <div class="RowH">Loan ID</div>
+        <div class="RowH">Loan Amount</div>
+        <div class="RowH">Rate%</div>
+        <div class="RowH" >Tennure</div>
+        <div class="RowH">EMI</div>
+        <div class="RowH">Status</div>
+    </div>
+  </div>
+
+  <div class="Appl-Container" *ngFor = "let user of approvedUserList; let index = index;">
+    <div class="Appl">
+      <div class="Row ">{{user.loanId}}</div>
+      <div class="Row ">{{user.loanAmount}}</div>
+      <div class="Row">{{user.interestRate}}%</div>
+      <div class="Row" >{{user.tenure}}</div>
+      <div class="Row">{{user.emi}}</div>
+      <div class="Row">{{user.applicationStatus}}</div>
+    </div>
+  </div>
+</div>

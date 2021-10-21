@@ -49,6 +49,7 @@ export class VehicleregistrationComponent implements OnInit {
           console.log(vehicle)
           alert("New Vehicle Registered!!");
           this.router.navigate(['UserDashboard'])
+          window.location.reload();
         }
         else
         {

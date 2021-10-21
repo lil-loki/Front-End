@@ -29,12 +29,12 @@ export class AdminloginComponent implements OnInit {
 
           sessionStorage.setItem('adminName', adminName)
           sessionStorage.setItem('adminId', adminId)
-          //this.router.navigate(['adminloginsuccess'])
+          this.router.navigate(['AdminDashboard'])
         }
         else {
           alert(user.status)
           this.message = user.message
-          this.router.navigate(['admin'])
+          this.router.navigate(['Login'])
         }
       }
     )

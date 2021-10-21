@@ -21,9 +21,12 @@ import { RegisterComponent } from './login/register/register.component';
 import { LoanapplicationComponent } from './loanapplication/loanapplication.component';
 import { VehicleregistrationComponent } from './vehicleregistration/vehicleregistration.component';
 import { UserdashmainComponent } from './userdashboard/userdashmain/userdashmain.component';
-import { SidebarComponent } from './userdashboard/sidebar/sidebar.component';
 import { CheckeligibilityComponent } from './checkeligibility/checkeligibility.component';
 import { AccountregistrationComponent } from './accountregistration/accountregistration.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { LoanapprovalComponent } from './loanapproval/loanapproval.component';
+import { ApproveloanlistComponent } from './approveloanlist/approveloanlist.component';
+import { RejectedloanlistComponent } from './rejectedloanlist/rejectedloanlist.component';
 
 
 
@@ -38,7 +41,8 @@ const routes:Routes=[
   {path:"Register",component:RegisterComponent},
   {path:"LoanApplication",component:LoanapplicationComponent},
   {path:"VehicleRegistration",component:VehicleregistrationComponent},
-  {path:"UserDashboard",component:UserdashmainComponent}
+  {path:"UserDashboard",component:UserdashmainComponent},
+  {path:"AdminDashboard",component:AdmindashboardComponent}
   ]
 
 @NgModule({
@@ -57,9 +61,12 @@ const routes:Routes=[
     LoanapplicationComponent,
     VehicleregistrationComponent,
     UserdashmainComponent,
-    SidebarComponent,
     CheckeligibilityComponent,
     AccountregistrationComponent,
+    AdmindashboardComponent,
+    LoanapprovalComponent,
+    ApproveloanlistComponent,
+    RejectedloanlistComponent,
   ],
   imports: [
     BrowserModule,
