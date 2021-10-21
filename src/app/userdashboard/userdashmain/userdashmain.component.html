@@ -58,29 +58,6 @@
           </div>
 
         </div>
-
-                <!-- <table class="table table-striped table-hover table-bordered">
-                  <thead>
-                    <tr>
-                      <th scope="col">Loan Id</th>
-                      <th scope="col">Principal</th>
-                      <th scope="col">Rate Of Interest</th>
-                      <th scope="col">Tennure</th>
-                      <th scope="col">EMI</th>
-                      <th scope="col">Status</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor = "let loan of LoanList; let index = index;">
-                        <th scope="row">{{loan.loanId}}</th>
-                        <td>{{loan.loanAmount}}</td>
-                        <td>{{loan.interestRate}}%</td>
-                        <td>{{loan.tenure}}</td>
-                        <td>{{loan.emi}}</td>
-                        <td>{{loan.applicationStatus}} </td>
-                      </tr>
-                      </tbody>
-                  </table> -->
                   <div>
                     <div class="Main-Appl-Container">
                       <div class="Appl-Header">
@@ -93,7 +70,7 @@
                     </div>
 
                     <div class="Appl-Container" *ngFor = "let loan of LoanList; let index = index;">
-                      <div class="Appl">
+                      <div class="Appl" (click)="pay(loan.emi,loan.applicationStatus)">
                         <div class="Row ">{{loan.loanAmount}}</div>
                         <div class="Row">{{loan.interestRate}}%</div>
                         <div class="Row" >{{loan.tenure}}</div>
