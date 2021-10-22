@@ -1,32 +1,79 @@
 <div [ngSwitch]="pageState">
   <div *ngSwitchCase="1">
     <div class="container">
-      <span class = "Registration-Header" >Register for Loan here</span>
-      <form class="Form-Body" (ngSubmit)="registerloan()" ngNativeValidate>
-        <div class="Lable-Container"><span class="Lable">Loan Amount :</span></div>
-        <input class="Text" type="number" name="loanAmount" placeholder= "Enter Loan Amount" (input)="selectChangeHandler()"  [(ngModel)]="loanAmount" required>
-        <div class="Lable-Container"><span class="Lable">Tenure :</span></div>
-        <select class="Text" type="number" name="tenure" (change)="selectChangeHandler()" [(ngModel)]="tenure"  required>
-            <option value=6>6</option>
-            <option value=12>12</option>
-            <option value=24>24</option>
-            <option value=36>36</option>
-            <option value=48>48</option>
-            <option value=60>60</option>
-            <option value=72>72</option>
-            <option value=84>84</option>
-        </select>
-        <div class="Lable-Container"><span class="Lable"> Rate Of Interest :</span></div>
-        <input class="Text" type="text" name="loantype" placeholder= "Rate"  [(ngModel)]="interestRate" required />
-        <div class="Lable-Container"><span class="Lable"> Estimated EMI :  {{emi}}</span></div>
-        <button class="Button" type="submit">Submit Loan</button>
-      </form>
+      <span class="Registration-Header">Register for Loan here</span>
+      <div class="Col">
+        <form class="Form-Body" (ngSubmit)="registerloan()" ngNativeValidate>
+          <div class="Lable-Container">
+            <span class="Lable">Loan Amount :</span>
+          </div>
+          <input
+            class="Text"
+            type="number"
+            name="loanAmount"
+            placeholder="Enter Loan Amount"
+            (input)="selectChangeHandler()"
+            [(ngModel)]="loanAmount"
+            required
+          />
+          <div class="Lable-Container"><span class="Lable">Tenure :</span></div>
+          <select
+            class="Text"
+            type="number"
+            name="tenure"
+            (change)="selectChangeHandler()"
+            [(ngModel)]="tenure"
+            required
+          >
+            <option value="6">6</option>
+            <option value="12">12</option>
+            <option value="24">24</option>
+            <option value="36">36</option>
+            <option value="48">48</option>
+            <option value="60">60</option>
+            <option value="72">72</option>
+            <option value="84">84</option>
+          </select>
+          <div class="Lable-Container">
+            <span class="Lable"> Rate Of Interest :</span>
+          </div>
+          <input
+            class="Text"
+            type="text"
+            name="loantype"
+            placeholder="Rate"
+            [(ngModel)]="interestRate"
+            required
+          />
+          <div class="Lable-Container">
+            <span class="Lable"> Estimated EMI : {{ emi }}</span>
+          </div>
+          <button class="Button" type="submit">Submit Loan</button>
+        </form>
+        <div class="File">
+          <div>
+            <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+            <button
+              type="button"
+              class="Button-File"
+              (click)="uploader.uploadAll()"
+              [disabled]="!uploader.getNotUploadedItems().length"
+            >
+              Upload
+            </button>
+          </div>
+          <div>
+            <div class="Doc-Text">
+              *Please Attach Your Aadhar, PanCard, First Six Months Pay Slip in a zipfile
+              with the name of the file being Your User ID.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="Vehicle-Container" *ngSwitchCase="2">
     <app-vehicleregistration></app-vehicleregistration>
   </div>
-  <p *ngSwitchDefault>
-  </p>
-  </div>
-
+  <p *ngSwitchDefault></p>
+</div>

@@ -13,6 +13,7 @@ export class UserdashmainComponent implements OnInit {
 
   constructor(private service: UserServiceService ,private router:Router) { }
 
+  handler:any = null;
   userName:any;
   userId:any;
   userLast:any;
@@ -21,7 +22,9 @@ export class UserdashmainComponent implements OnInit {
   userEmail:any;
   userGender:any;
   userZip:any;
-  sidebarState:number=1;
+  sidebarState:number=3;
+
+  color:string="yellow"
 
   loanApplied:number=0;
   loanApproved:number=0;
@@ -29,6 +32,8 @@ export class UserdashmainComponent implements OnInit {
   LoanList : AppliedLoanList[] = [];
 
   ngOnInit(): void {
+
+    this.loadStripe();
     this.userName=sessionStorage.getItem('userName');
     this.userId=sessionStorage.getItem('userId');
     this.userLast=sessionStorage.getItem('userLast');
@@ -97,6 +102,54 @@ export class UserdashmainComponent implements OnInit {
     setTimeout(function(){
       window.location.href = '';
    }, 1000);
+  }
+
+  pay(amount: any,status:any) {
+
+    if(status=="Approved")
+    {
+      var handler = (<any>window).StripeCheckout.configure({
+        key: 'pk_test_51Jmvw6SETkxKweHmzqVEfrk0TX374vLBK7FdVaIsB3JKlTXvgDyxWwqgE9ghaexox8ZZn1AcbPx7tgDCeOqYu09e00AQtuvb7p',
+        locale: 'auto',
+        token: function (token: any) {
+          // You can access the token ID with `token.id`.
+          // Get the token ID to your server-side code for use.
+          console.log(token)
+          alert('Payment Success!!');
+        }
+      });
+
+      handler.open({
+        name: 'Loan Lae Loo',
+        description: 'Payment Portal',
+        amount: amount * 100
+      });
+    }
+    else{
+      alert("Loan Is Not Yet Approved")
+    }
+  }
+
+  loadStripe() {
+
+    if(!window.document.getElementById('stripe-script')) {
+      var s = window.document.createElement("script");
+      s.id = "stripe-script";
+      s.type = "text/javascript";
+      s.src = "https://checkout.stripe.com/checkout.js";
+      s.onload = () => {
+        this.handler = (<any>window).StripeCheckout.configure({
+          key: 'pk_test_51Jmvw6SETkxKweHmzqVEfrk0TX374vLBK7FdVaIsB3JKlTXvgDyxWwqgE9ghaexox8ZZn1AcbPx7tgDCeOqYu09e00AQtuvb7p',
+          locale: 'auto',
+          token: function (token: any) {
+            console.log(token)
+            alert('Payment Success!!');
+          }
+        });
+      }
+
+      window.document.body.appendChild(s);
+    }
   }
 
 }
