@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes,RouterModule } from '@angular/router';
 import {ChartModule} from 'primeng/chart';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 import { AppComponent } from './app.component';
@@ -75,7 +76,8 @@ const routes:Routes=[
     NgbModule,
     ChartModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

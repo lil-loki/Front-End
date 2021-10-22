@@ -22,7 +22,7 @@ export class UserdashmainComponent implements OnInit {
   userEmail:any;
   userGender:any;
   userZip:any;
-  sidebarState:number=1;
+  sidebarState:number=3;
 
   color:string="yellow"
 

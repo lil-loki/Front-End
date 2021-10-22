@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Loan } from '../Loan';
 import { UserServiceService } from '../user-service.service';
+import { FileUploader } from 'ng2-file-upload';
+
 
 @Component({
   selector: 'app-loanapplication',
@@ -10,6 +12,10 @@ import { UserServiceService } from '../user-service.service';
   styleUrls: ['./loanapplication.component.css']
 })
 export class LoanapplicationComponent implements OnInit {
+
+
+
+
 
   pageState:number=1;
   applicationStatus:String="";
@@ -19,20 +25,30 @@ export class LoanapplicationComponent implements OnInit {
   processingFee:number=0;
   tenure:number=0;
   loantype:String="";
-  user_id:any;
+  user_id=sessionStorage.getItem('userId');
   selectedEMI!: string;
   emi:number=0;
 
+  UploadURL = 'http://localhost:3000/upload';
+  public uploader: FileUploader = new FileUploader({url:this.UploadURL, itemAlias: 'file'});
+
 
   constructor(private service:UserServiceService,private router:Router) { }
-  ngOnInit(): void {
-    this.user_id=sessionStorage.getItem('userId');
-    if(this.user_id==null)
-    {
-      this.router.navigate(['Login']);
-    }
-  }
+    ngOnInit(): void {
+      this.user_id=sessionStorage.getItem('userId');
+      if(this.user_id==null)
+      {
+        this.router.navigate(['Login']);
+      }
 
+      this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
+      this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
+          console.log('FileUpload:uploaded:', item, status, response);
+          console.log(this.UploadURL);
+          alert('File uploaded successfully');
+
+      }
+    }
 
   selectChangeHandler() {
     if(this.tenure==6)

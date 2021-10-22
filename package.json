@@ -23,6 +23,7 @@
     "@swimlane/ngx-charts": "^19.0.1",
     "bootstrap": "^5.1.2",
     "chart.js": "^3.5.1",
+    "ng2-file-upload": "^1.4.0",
     "primeng": "^12.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
